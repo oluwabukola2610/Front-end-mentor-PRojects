@@ -1,0 +1,157 @@
+:root {
+  --dark-cyan: #3c8067;
+  --cream: #f2ebe3;
+  --dark-blue: #1c232b;
+  --grayish-blue: #6c7289;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: var(--cream);
+  color: var(--grayish-blue);
+  line-height: 1.75;
+}
+
+.container {
+  width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.product-title,
+.price {
+  font-family: 'Fraunces', serif;
+}
+
+.product-category {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.product-title {
+  line-height: 1;
+  color: var(--dark-blue);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-image-desktop {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.product-image-mobile {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  display: none;
+}
+
+.product-details {
+  background-color: var(--white);
+  padding: 2rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.discount-price {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark-cyan);
+}
+
+.regular-price {
+  text-decoration: line-through;
+}
+
+.add-cart {
+  width: 100%;
+  height: 48px;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-cart:hover {
+  background-color: var(--dark-blue);
+}
+
+/* FROM FE MENTOR */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/* MOBILE */
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  .product {
+    grid-template-columns: 1fr;
+  }
+
+  .product-details {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    gap: 15px;
+  }
+
+  .product-image-desktop {
+    display: none;
+  }
+
+  .product-image-mobile {
+    display: block;
+  }
+
+  .attribution {
+    display: none;
+  }
+}

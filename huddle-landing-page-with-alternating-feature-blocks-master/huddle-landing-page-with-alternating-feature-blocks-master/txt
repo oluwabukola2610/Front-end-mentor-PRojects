@@ -1,0 +1,20 @@
+ <div class="copyright-container">
+          <p class="copyright">
+            &copy; Copyright 2018 Huddle. All rights reserved.
+          </p>
+        </div>
+
+        <li class="company-info">
+            <i class="bi bi-phone contact-icon" alt="" aria-hidden="true">
+            </i
+            ><a href="tel:+1-543-123-4567">+1-543-123-4567</a>
+          </li>
+          <li class="company-info">
+            <i
+              class="bi bi-envelope contact-icon"
+              alt=""
+              aria-hidden="true"
+            ></i
+            ><a href="mailto:example@huddle.com">example@huddle.com</a>
+          </li>
+        </ul>

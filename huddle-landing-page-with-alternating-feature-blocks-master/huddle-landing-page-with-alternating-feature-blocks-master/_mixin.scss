@@ -1,0 +1,17 @@
+
+// media querie for large screen anmd mobile
+@mixin devices ($breakpoint) { //the name of the mixin is devices
+  
+  @if $breakpoint == desktop {    
+  @media only screen and (min-width: 768px){
+    @content;
+  }
+}
+
+@if $breakpoint == tablet {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+}

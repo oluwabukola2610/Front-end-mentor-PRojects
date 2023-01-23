@@ -1,0 +1,178 @@
+:root {
+  /* Primary Colors */
+  --soft-blue: #8bacda;
+  --cyan: #00fff7;
+  /* Neutral Colors */
+  --main-blue: #0d192b;
+  --card-blue: #14253d;
+  --line-blue: #2f415b;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 0.625*16px = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.container {
+  background-color: var(--main-blue);
+  color: var(--soft-blue);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--card-blue);
+  width: 32.5rem;
+  padding: 2.4rem;
+  border-radius: 1.8rem;
+}
+
+.card-header {
+  border-bottom: 1px solid var(--line-blue);
+  margin-bottom: 2rem;
+}
+
+.nft-img-container {
+  margin-bottom: 2rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: 0.2s ease;
+}
+
+.nft-img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+  transition: 0.25s ease;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-size: 2rem;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.nft-img-container:hover {
+  background-color: var(--cyan);
+}
+
+.nft-img-container:hover .nft-img {
+  opacity: 0.5;
+}
+
+.nft-img-container:hover .eye-icon {
+  opacity: 1;
+}
+
+.card-heading {
+  color: var(--white);
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.card-heading:hover {
+  color: var(--cyan);
+}
+
+.card-description {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+}
+
+.price,
+.duration {
+  display: flex;
+  align-items: center;
+}
+
+.price img,
+.duration img {
+  margin-right: 0.8rem;
+}
+
+.price-value {
+  font-size: 1.6rem;
+  color: var(--cyan);
+}
+
+.duration-left {
+  font-size: 1.6rem;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 1.8rem;
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.avatar-description {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.avatar-name {
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.avatar-name:hover {
+  color: var(--cyan);
+}
+
+@media screen and (min-width: 501px) {
+  .card {
+    width: 35rem;
+  }
+
+  .card-description {
+    font-size: 1.8rem;
+  }
+
+  .avatar-description {
+    font-size: 1.6rem;
+  }
+}
